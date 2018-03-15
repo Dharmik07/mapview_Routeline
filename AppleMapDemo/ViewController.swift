@@ -27,7 +27,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate , MKMapViewDe
         mapView.showsPointsOfInterest = true
         mapView.showsUserLocation = true
         mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
-        
+
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         
