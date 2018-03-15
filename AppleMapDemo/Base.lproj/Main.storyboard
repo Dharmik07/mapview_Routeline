@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleMapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0I-Us-SR2">
+                                <rect key="frame" x="0.0" y="40" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X0I-Us-SR2" secondAttribute="height" multiplier="25:8" id="e3Q-5f-doV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Standard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStandard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaK-Pz-Bwf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMm-Sf-h81">
+                                <rect key="frame" x="125" y="40" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.1773487107" green="0.44658163239999998" blue="0.7692536485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Setelite">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSetelite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dli-3j-N1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-eb-ss0">
+                                <rect key="frame" x="250" y="40" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.23473825800000001" green="0.783379347" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Hybrid">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHybrid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpn-7t-XNT"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-8d-jDr">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Rt0-Sc-Jv4"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCe-8d-jDr" secondAttribute="bottom" id="1qM-Np-jl3"/>
+                            <constraint firstItem="YMm-Sf-h81" firstAttribute="width" secondItem="X0I-Us-SR2" secondAttribute="width" id="3bz-cE-fr0"/>
+                            <constraint firstItem="YMm-Sf-h81" firstAttribute="height" secondItem="X0I-Us-SR2" secondAttribute="height" id="7Le-1m-mi1"/>
+                            <constraint firstItem="X0I-Us-SR2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8b8-Bm-kFM"/>
+                            <constraint firstItem="YMm-Sf-h81" firstAttribute="leading" secondItem="X0I-Us-SR2" secondAttribute="trailing" id="9CJ-Te-8Wl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCe-8d-jDr" secondAttribute="trailing" id="F07-PW-ojS"/>
+                            <constraint firstItem="bWg-eb-ss0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JNI-S3-B3S"/>
+                            <constraint firstItem="bWg-eb-ss0" firstAttribute="centerY" secondItem="YMm-Sf-h81" secondAttribute="centerY" id="JWW-6f-cvJ"/>
+                            <constraint firstItem="fCe-8d-jDr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OKk-m6-gyj"/>
+                            <constraint firstItem="bWg-eb-ss0" firstAttribute="leading" secondItem="YMm-Sf-h81" secondAttribute="trailing" id="Wqz-Rl-E9T"/>
+                            <constraint firstItem="bWg-eb-ss0" firstAttribute="width" secondItem="YMm-Sf-h81" secondAttribute="width" id="ZT0-2K-77w"/>
+                            <constraint firstItem="bWg-eb-ss0" firstAttribute="height" secondItem="YMm-Sf-h81" secondAttribute="height" id="gQs-Aj-foN"/>
+                            <constraint firstItem="fCe-8d-jDr" firstAttribute="top" secondItem="X0I-Us-SR2" secondAttribute="bottom" id="h2k-aH-cFV"/>
+                            <constraint firstItem="X0I-Us-SR2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vIq-SH-YUz"/>
+                            <constraint firstItem="YMm-Sf-h81" firstAttribute="centerY" secondItem="X0I-Us-SR2" secondAttribute="centerY" id="xJ8-Cy-bNX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnHybrid" destination="bWg-eb-ss0" id="A5t-j4-NZK"/>
+                        <outlet property="btnSatellite" destination="YMm-Sf-h81" id="ykp-80-vJc"/>
+                        <outlet property="btnStandard" destination="X0I-Us-SR2" id="ck4-ey-uBu"/>
+                        <outlet property="mapView" destination="fCe-8d-jDr" id="9NR-e7-DMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
